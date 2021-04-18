@@ -72,20 +72,20 @@ bindsym Print exec gnome-screenshot -i
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # habilitar/deshabilitar gaps
 
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run
 set $bg "#444477"
 
-bindsym $mod+d exec rofi -theme .config/i3/material -font "Cantarell 12" -show run
-bindsym $mod+F2 exec dmenu_run -i -fn "Cantarell-14" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
+#bindsym $mod+d exec rofi -theme .config/i3/material -font "Cantarell 12" -show run
+#bindsym $mod+F2 exec dmenu_run -i -fn "Cantarell-14" -nf '#ffb52a' -sb '#ffb52a' -sf '#222'
 bindsym $mod+shift+p exec rofi -theme .config/i3/material -font "Cantarell 12" -show window
 
 # monitos
@@ -145,6 +145,7 @@ bindsym $mod+a focus parent
 
 # per bloquejar sa pantalla
 bindsym $mod+mod1+l exec dm-tool lock
+bindsym $mod+mod1+s exec systemctl suspend
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -243,9 +244,12 @@ smart_borders on
 #
 bindsym $mod+Shift+a gaps inner all minus 2; gaps outer all minus 2;
 bindsym $mod+Shift+g gaps inner all plus 2; gaps outer all plus 2;
-
+bindsym $mod+mod1+f exec firefox
+bindsym $mod+mod1+t exec thunar
 # això és per es espais de treball
 assign [class="firefox"] $ws2
+assign [class="Thunar"] $ws4
+assign [class="Typora"] $ws4
 assign [class="^Spotify*"] $ws10
 
 for_window [title="video0 - mpv"] floating enable
@@ -258,9 +262,7 @@ for_window [title="video0 - mpv"] sticky enable
 # finds out, if available)
 bar {
 	position top
-    #i3bar_command i3bar -t
-    #status_command i3blocks
-    status_command i3status
+    	status_command py3status
 	#height 30
 	colors {
 		#background #222222ff
@@ -288,6 +290,7 @@ exec_always /ops/script/wallpaper
 #exec_always compton
 exec picom
 exec dunst
+exec wallpaper
 exec_always nm-applet
 #exec redshift-gtk
 

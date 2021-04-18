@@ -11,3 +11,7 @@
 `$mod+Shift+u`	subir brillo
 
 `$mod+Shift+i`	bajar brillo
+
+#### paquetes necesarios para esta configuracion
+
+`pacman -S feh picom brightnessctl py3status` 
