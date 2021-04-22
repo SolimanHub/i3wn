@@ -126,11 +126,12 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+w exec wallpaper
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -244,13 +245,12 @@ smart_borders on
 #
 bindsym $mod+Shift+a gaps inner all minus 2; gaps outer all minus 2;
 bindsym $mod+Shift+g gaps inner all plus 2; gaps outer all plus 2;
-bindsym $mod+mod1+f exec firefox
+bindsym $mod+f exec firefox
 bindsym $mod+mod1+t exec thunar
 # això és per es espais de treball
 assign [class="firefox"] $ws2
 assign [class="Thunar"] $ws4
 assign [class="Typora"] $ws4
-assign [class="^Spotify*"] $ws10
 
 for_window [title="video0 - mpv"] floating enable
 for_window [title="video0 - mpv"] sticky enable
