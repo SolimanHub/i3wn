@@ -14,4 +14,4 @@
 
 #### paquetes necesarios para esta configuracion
 
-`pacman -S feh picom brightnessctl py3status` 
+`pacman -S dmenu feh picom brightnessctl py3status` 
