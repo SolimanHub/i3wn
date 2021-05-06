@@ -291,6 +291,7 @@ exec_always /ops/script/wallpaper
 exec picom
 exec dunst
 exec wallpaper
+exec source /home/dse_xeon/.config/bashrc/.mis_alias
 exec_always nm-applet
 #exec redshift-gtk
 
