@@ -15,9 +15,14 @@
 ### Configuracion
 
 `pacman -S xorg-fonts-misc` 
+
 `pacman -S dmenu feh picom brightnessctl`
+
 `yay -S polybar`
+
 `yay -S ttf-unifont siji-git` 
+
 `cd $HOME/.config/i3`
+
 `./init.sh`
 
