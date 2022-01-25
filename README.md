@@ -12,6 +12,12 @@
 
 `$mod+Shift+i`	bajar brillo
 
-#### paquetes necesarios para esta configuracion
+### Configuracion
 
-`pacman -S dmenu feh picom brightnessctl py3status` 
+`pacman -S xorg-fonts-misc` 
+`pacman -S dmenu feh picom brightnessctl`
+`yay -S polybar`
+`yay -S ttf-unifont siji-git` 
+`cd $HOME/.config/i3`
+`./init.sh`
+
