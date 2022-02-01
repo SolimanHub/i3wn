@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
 mkdir -p $HOME/.config/polybar/
-cp /usr/share/doc/polybar/config $HOME/.config/polybar/
-cp launch.sh $HOME/.config/polybar/
-cd $HOME/.config/polybar/
-source launch.sh
+ln -s $HOME/.config/i3/polybar $HOME/.config/polybar
+source $HOME/.config/polybar/launch.sh

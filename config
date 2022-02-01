@@ -259,7 +259,7 @@ bindsym $mod+f exec firefox
 bindsym $mod+mod1+t exec thunar
 # això és per es espais de treball
 assign [class="firefox"] $ws2
-assign [class="brave"] $ws2
+assign [class="brave-browser"] $ws8
 assign [class="Thunar"] $ws4
 assign [class="Typora"] $ws4
 

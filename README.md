@@ -1,4 +1,4 @@
-# Configuracion para i3wm
+# Configuracion para i3wm y polybar
 
     He tomado como referencia el trabajo de [GerrySoft](https://github.com/GerrySoft) para la elavoracion de mis configuraciones.
 
