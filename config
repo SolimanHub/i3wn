@@ -163,6 +163,7 @@ bindsym $mod+mod1+s exec systemctl suspend
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
+set $ws10 "0"
 set $ws1 "1: "
 set $ws2 "2: "
 set $ws3 "3: "
@@ -172,9 +173,9 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "0: "
 
 # switch to workspace
+bindsym $mod+0 workspace $ws10
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -184,7 +185,6 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -256,10 +256,10 @@ smart_borders on
 bindsym $mod+Shift+a gaps inner all minus 2; gaps outer all minus 2;
 bindsym $mod+Shift+g gaps inner all plus 2; gaps outer all plus 2;
 bindsym $mod+f exec firefox
+bindsym $mod+b exec brave
 bindsym $mod+mod1+t exec thunar
 # això és per es espais de treball
 assign [class="firefox"] $ws2
-assign [class="brave-browser"] $ws8
 assign [class="Thunar"] $ws4
 assign [class="Typora"] $ws4
 
@@ -294,7 +294,7 @@ client.focused #bf7500 #bf7500 #bf7500 #ffe570
 #bindsym --release Caps_Lock exec pkill -SIGRTMIN+2 i3blocks
 
 exec_always setxkbmap -layout us
-exec_always feh --bg-fill "/usr/share/wanderos/background/Zorro.jpg"
+exec_always feh --bg-fill "$HOME/Imágenes/wallpapers/wallpapertip_code-wallpaper-hd_1606134.jpg"
 #exec_always /home/gerry/.config/i3/monitors.sh auto
 exec_always /ops/script/wallpaper
 #exec_always /home/gerry/.config/i3/polybar.sh
@@ -309,3 +309,8 @@ exec_always nm-applet
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# Bateria descargada
+# Instalar
+# yay -S i3-battery-popup
+exec --no-startup-id i3-battery-popup
+for_window [title="Battery Warning"] sticky enable
