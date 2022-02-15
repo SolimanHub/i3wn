@@ -304,7 +304,7 @@ client.focused #bf7500 #bf7500 #bf7500 #ffe570
 exec_always setxkbmap -layout us
 exec_always feh --bg-fill "$HOME/Imágenes/wallpapers/wallpapertip_code-wallpaper-hd_1606134.jpg"
 #exec_always /home/gerry/.config/i3/monitors.sh auto
-exec_always /ops/script/wallpaper
+exec_always /opt/scripts/wallpaper
 #exec_always /home/gerry/.config/i3/polybar.sh
 #exec_always compton
 exec picom
