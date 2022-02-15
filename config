@@ -65,6 +65,13 @@ bindsym $mod+XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 #bindsym XF86AudioMute exec amixer sset 'Master' toggle && pkill -RTMIN+10 i3blocks
 #bindsym XF86AudioMicMute exec amixer sset 'Master' toggle && pkill -RTMIN+10 i3blocks
 
+#captura de pantalla
+# take a screenshot of a screen region and copy it to a clipboard
+bindsym --release Shift+Print exec "scregcp -s $HOME/Imágenes/"
+
+# take a screenshot of a whole window and copy it to a clipboard
+bindsym --release Print exec "scregcp $HOME/Imágenes/"
+
 # brillantor
 bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym XF86MonBrightnessUp exec brightnessctl set +2%
@@ -259,7 +266,8 @@ bindsym $mod+f exec firefox
 bindsym $mod+b exec brave
 bindsym $mod+mod1+t exec thunar
 # això és per es espais de treball
-assign [class="firefox"] $ws2
+assign [class="firefox"] $ws9
+assign [class="brave"] $ws8
 assign [class="Thunar"] $ws4
 assign [class="Typora"] $ws4
 
