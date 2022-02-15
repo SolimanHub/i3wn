@@ -10,3 +10,9 @@ sudo ln -s /opt/scripts/scregcp /bin/scregcp
 sudo ln -s /opt/scripts/wallpaper /bin/wallpaper
 cd $HOME/Imágenes/
 git clone git@github.com:SolimanHub/wallpapers.git 
+cd $HOME/.config/
+rm -r nvim/
+git clone git@github.com:SolimanHub/nvim.git 
+mkdir plugged/
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
