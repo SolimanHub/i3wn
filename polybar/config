@@ -63,7 +63,7 @@ tray-position = left
 
 modules-left = workspaces 
 modules-center = date
-modules-right = powermenu wifi eth layout temperature memory memoryswap cpu battery brightness sound xkbstates 
+modules-right = wifi eth layout temperature memory memoryswap cpu battery brightness sound xkbstates powermenu 
 
 ;IP address
 [module/eth]
@@ -283,18 +283,48 @@ interval = 0.5
 label-font = 7
 label-foreground = ${colors.menucol-green}
 
-
-;Custom Exit Button
+;
+;
+;
 [module/powermenu]
-type = custom/text
+type = custom/menu
 
-content = ⏻
-content-font = 7
-content-padding = 2
-content-foreground = ${colors.menucol-lightblue}
-content-underline = ${colors.menucol-lightblue}
+expand-right = true
 
-click-left = sh /opt/scripts/powermenu.sh
+format-spacing = 1
+
+label-open = ⏻
+label-open-padding = 2
+label-open-foreground = ${colors.menucol-lightblue}
+label-close =  
+label-close-padding = 2
+label-close-foreground = ${colors.menucol-lightblue}
+label-separator = ⏽ 
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 =   
+menu-0-0-foreground = ${colors.menucol-yellow}
+menu-0-0-margin = 2
+menu-0-0-exec = reboot
+menu-0-1 = ⏻
+menu-0-1-foreground = ${colors.menucol-red}
+menu-0-1-margin = 2
+menu-0-1-exec = sh /opt/scripts/powermenu.sh
+;
+;
+;
+;Custom Exit Button
+
+;[module/powermenu]
+;type = custom/text
+;
+;content = ⏻
+;content-font = 7
+;content-padding = 2
+;content-foreground = ${colors.menucol-lightblue}
+;content-underline = ${colors.menucol-lightblue}
+;
+;click-left = sh /opt/scripts/powermenu.sh
 
 
 ;Battery Indicator
