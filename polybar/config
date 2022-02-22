@@ -63,7 +63,7 @@ tray-position = left
 
 modules-left = workspaces 
 modules-center = date
-modules-right = wifi eth layout temperature memory memoryswap cpu battery brightness sound powermenu xkbstates 
+modules-right = powermenu wifi eth layout temperature memory memoryswap cpu battery brightness sound xkbstates 
 
 ;IP address
 [module/eth]
@@ -285,16 +285,16 @@ label-foreground = ${colors.menucol-green}
 
 
 ;Custom Exit Button
-;[module/powermenu]
-;type = custom/text
-;
-;content = ⏻
-;content-font = 7
-;content-padding = 2
-;content-foreground = ${colors.menucol-lightblue}
-;content-underline = ${colors.menucol-lightblue}
-;
-;click-left = sh ~/.config/i3/powermenu.sh
+[module/powermenu]
+type = custom/text
+
+content = ⏻
+content-font = 7
+content-padding = 2
+content-foreground = ${colors.menucol-lightblue}
+content-underline = ${colors.menucol-lightblue}
+
+click-left = sh /opt/scripts/powermenu.sh
 
 
 ;Battery Indicator
