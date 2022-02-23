@@ -312,6 +312,7 @@ exec dunst
 exec wallpaper
 exec source /home/dse_xeon/.config/bashrc/.mis_alias
 exec_always nm-applet
+exec_always sh /opt/scripts/nvimClean
 #exec redshift-gtk
 
 for_window [class="^.*"] border pixel 3
