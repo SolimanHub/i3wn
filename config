@@ -310,7 +310,7 @@ exec_always /opt/scripts/wallpaper
 exec picom
 exec dunst
 exec wallpaper
-exec source /home/dse_xeon/.config/bashrc/.mis_alias
+# exec source /home/dse_xeon/.config/bashrc/.mis_alias
 exec_always nm-applet
 exec_always sh /opt/scripts/nvimClean
 #exec redshift-gtk
