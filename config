@@ -250,13 +250,13 @@ smart_borders on
 #
 bindsym $mod+Shift+a gaps inner all minus 2; gaps outer all minus 2;
 bindsym $mod+Shift+g gaps inner all plus 2; gaps outer all plus 2;
-bindsym $mod+f exec firefox
+bindsym $mod+f exec /opt/firefox/firefox
 bindsym $mod+b exec brave
-bindsym $mod+mod1+t exec thunar
+bindsym $mod+mod1+t exec nemo
 # això és per es espais de treball
 #assign [class="firefox"] $ws9
 #assign [class="brave"] $ws8
-assign [class="Thunar"] $ws4
+assign [class="nemo"] $ws4
 assign [class="Typora"] $ws4
 
 for_window [title="video0 - mpv"] floating enable
@@ -289,8 +289,10 @@ client.focused #bf7500 #bf7500 #bf7500 #ffe570
 #bindsym $mod+c exec /home/gerry/.config/i3/webcam.sh
 #bindsym --release Caps_Lock exec pkill -SIGRTMIN+2 i3blocks
 
-exec_always setxkbmap -layout us
-exec_always feh --bg-fill "$HOME/Imágenes/wallpapers/wallpapertip_code-wallpaper-hd_1606134.jpg"
+exec_always setxkbmap -layout latam
+#exec_always setxkbmap -layout es
+#exec_always setxkbmap -layout us
+#exec_always feh --bg-fill "$HOME/Imágenes/wallpapers/wallpapertip_code-wallpaper-hd_1606134.jpg"
 #exec_always /home/gerry/.config/i3/monitors.sh auto
 exec_always /opt/scripts/wallpaper
 #exec_always /home/gerry/.config/i3/polybar.sh
