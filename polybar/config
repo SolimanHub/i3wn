@@ -81,7 +81,7 @@ tray-position = left
 
 modules-left = workspaces 
 modules-center = date
-modules-right = wifi eth layout temperature memory memoryswap cpu battery brightness sound xkbstates powermenu 
+modules-right = wifi eth layout system-cpu-temppercore memory memoryswap cpu battery brightness sound xkbstates powermenu 
 
 ;IP address
 [module/eth]
@@ -458,3 +458,8 @@ ramp-3 = 
 ramp-4 = 
 ramp-font = 7
 ramp-foreground = ${colors.menucol-deepblue}
+
+[module/system-cpu-temppercore]
+type = custom/script
+exec = $HOME/.config/i3/polybar/system-cpu-temppercore.sh
+interval = 60

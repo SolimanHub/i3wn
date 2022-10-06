@@ -307,7 +307,7 @@ exec_always sh /opt/scripts/nvimClean
 
 for_window [class="^.*"] border pixel 3
 new_window pixel 3
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/i3/polybar/launch.sh
 # Bateria descargada
 # Instalar
 # yay -S i3-battery-popup
